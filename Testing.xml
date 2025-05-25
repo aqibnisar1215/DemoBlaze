@@ -3,6 +3,7 @@
     <test name="SampleTests">
         <classes>
             <class name="Tests.SignupTest"/>
+            <class name="Tests.LoginTest"></class>
         </classes>
     </test>
 </suite>
