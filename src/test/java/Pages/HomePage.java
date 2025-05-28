@@ -42,6 +42,17 @@ public class HomePage extends BasePage{
         btn_Login.click();
     }
 
+
+    // Click on the Laptop Link
+    public void  ClickLapTopsBtn() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(btn_Laptops));
+        btn_Laptops.click();
+        Thread.sleep(3000);
+
+    }
+
+
+    // Get the all products
     public List<String> getProductList() {
         List<WebElement> products = driver.findElements(list_ProductNames_loc);
         List<String> productNames = new ArrayList<>();
@@ -52,12 +63,6 @@ public class HomePage extends BasePage{
         return productNames;
     }
 
-    public void  ClickLapTopsBtn() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(btn_Laptops));
-        btn_Laptops.click();
-        Thread.sleep(3000);
-
-    }
 
     public void  ClickPhoneBtn() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(btn_Phones));
